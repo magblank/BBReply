@@ -1,0 +1,15 @@
+# /etc/systemd/system/bbreply.service
+
+[Unit]
+Description=BBReply Service
+After=network.target
+
+[Service]
+ExecStart=/opt/BBReply/bbreply
+WorkingDirectory=/opt/BBReply
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
